@@ -4,21 +4,40 @@
 - Prompt()
 */
 
-//Indo além do console.log...
+//Indo além do console.log()...
 //@@ ALERT()
-
+alert("Olá usuário");
 
 //@@ CONFIRM()
+let valorEscolhido =  confirm("Deseja realmente sair?");
+console.log(valorEscolhido);
 
+if(valorEscolhido){ //True
+    alert("Saiu da aplicação");
+}else{ //false
+    alert("Continua na aplicação");
+}
 
 //@@ PROMPT()
-
+let valorInformado = prompt("Informe um valor inteiro");
 
 /// @@@ CONVERSÃO DE DADOS EM JS
+let valorConvertido = parseFloat(valorInformado);
+//let valorConvertido = Number(valorInformado); //Outra forma de fazer a conversão
 
+let valor2 = 10;
+let resultado = valor2+valorConvertido;
+alert(resultado);
 
 /// @@@ FUNÇÕES MATEMÁTICAS EM JS
+function getRandomIntInclusive(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
 
+let aleatorio = getRandomIntInclusive(1,3);
+console.log(aleatorio);
 
 /* @@@@ Dicas Mesa de Trabalho: Por onde começar a realizar a atividade ??
 1 - Capturar a escolha de vocês (1, 2 ou 3)

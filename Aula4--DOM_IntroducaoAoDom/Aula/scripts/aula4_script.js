@@ -1,22 +1,14 @@
 /* NESTA AULA, FAREMOS APENAS A CAPTURA DAS INFORMAÇÕES DO HTML, 
 SEM MODIFICAR OU ADICIONAR E REMOVER ELEMENTOS */
 
-// Acessando o objeto Window e Document do HTML
+//Vendo todo o objeto document
+console.log(document);
 
+let liList = document.querySelectorAll("li");
+console.log(liList[4].innerText);
 
-// BODY -> "Você poderia obter este elemento?"
+let liPegoPeloId = document.getElementById("item2");
+console.log(liPegoPeloId);
 
-
-// CAPTURANDO PELO TIPO DE ELEMENTO
-
-
-// CAPTURANDO PELO ID
-
-
-// CAPTURANDO PELA CLASSE
-
-
-// CAPTURANDO TODOS OS ELEMENTOS EM UMA LISTA
-
-
-    // CAPTURANDO TODOS OS ELEMENTOS, PERCORRENDO E ITERANDO
+let articleAnimado = document.querySelector(".animado");
+console.log(articleAnimado.innerText);

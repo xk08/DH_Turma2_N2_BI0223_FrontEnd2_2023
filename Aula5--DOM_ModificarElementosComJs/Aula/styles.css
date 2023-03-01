@@ -17,6 +17,20 @@ h1 {
   font-size: 3em;
 }
 
+.novo-h1 {
+  text-align: right;
+  margin: 2em 0;
+  color: rgb(194, 57, 39);
+  font-size: 4em;
+}
+
+h3 {
+  text-align: center;
+  margin: 2em 0;
+  color: rgb(176, 129, 19);
+  font-size: 3em;
+}
+
 ul {
   display: flex;
   list-style: none;

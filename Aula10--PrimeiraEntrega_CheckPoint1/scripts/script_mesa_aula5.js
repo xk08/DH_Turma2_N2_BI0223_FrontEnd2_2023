@@ -7,10 +7,13 @@
 let body = document.querySelector('body');
 let h1 = document.querySelector('h1');
 
+
+
 /* Função que é chamada pelo onChanged ao clicar no ToggleSwitch */
 function alteraTemaComToggle() {
 
     let itemsList = document.querySelectorAll('.item');
+
 
     /* Adicionando/removendo as classes (dark-mode) css nos elementos capturados */
     body.classList.toggle('body-dark');

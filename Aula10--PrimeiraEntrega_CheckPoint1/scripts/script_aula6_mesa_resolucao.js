@@ -54,14 +54,61 @@ const listafelinos = [
         do mundo, atingindo uma velocidade máxima de 115 km/h em corridas de até quinhentos metros.`,
         imgURL: "./imagens/chita.jpg"
     },
+    {
+        titulo: "O guepardo 2.0",
+        descricao: `O guepardo, ou chita (Acinonyx jubatus) é um membro atípico da família felina. É o único
+        representante vivo do gênero Acinonyx. Ele caça graças à sua visão e grande velocidade. É o animal terrestre
+        mais rápido
+        do mundo, atingindo uma velocidade máxima de 115 km/h em corridas de até quinhentos metros.`,
+        imgURL: "./imagens/chita.jpg"
+    },
 ];
 
-//Capturar o elemento pai 
+///PRIMEIRA PARTE
+
+let h1Novo = document.querySelector("h1");
+console.log(h1Novo);
+
+h1Novo.setAttribute("marcos", "titulo");
+console.log(h1Novo);
+
+let img = document.createElement("img");
+img.setAttribute("src", "https://logodownload.org/wp-content/uploads/2022/04/javascript-logo-1.png");
+img.setAttribute("width", "120px")
+img.setAttribute("height", "120")
+document.body.appendChild(img);
+
+
+///SEGUNDA PARTE
+//Capturar o elemento pai
+let elementoPai = document.getElementById("elementoPai");
 
 // Definir função que renderiza os elementos pegos na lista
 
-//Percorrer a lista de felinos
+function renderizaElementosEmtela() {
 
-// Criar um novo card e seu template
+    //Percorrer a lista de felinos
+    for (let felino of listafelinos) {
+        console.log(felino.titulo);
 
-//Adicionar o novo card a lista (elemento pai)
+        // Criar um novo card e seu template
+        let novaDiv = document.createElement("div");
+        novaDiv.setAttribute("class", "item");
+        //novaDiv.classList.add("item");
+
+        novaDiv.innerHTML = `
+                                <img src="${felino.imgURL}">
+                                <h2>"${felino.titulo}</h2>
+                                <p>
+                                "${felino.descricao}
+                                </p>
+                            `;
+
+        //Adicionar o novo card a lista (elemento pai)
+        elementoPai.appendChild(novaDiv);
+    }
+
+}
+
+//Executa a função que renderiza os elementos
+renderizaElementosEmtela();

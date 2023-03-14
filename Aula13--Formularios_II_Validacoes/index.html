@@ -7,7 +7,7 @@
   <meta name="description" content="">
   <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
   <meta name="generator" content="Hugo 0.88.1">
-  <title>Aula 11</title>
+  <title>Aula 13</title>
 
   <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/navbar-static/">
   <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/checkout/">
@@ -21,9 +21,6 @@
 
   <!-- Custom styles for this template -->
   <link href="styles/navbar-top.css" rel="stylesheet">
-
-  <script src="scripts/script_aula11.js" defer></script>
-
 </head>
 
 <body>
@@ -38,7 +35,7 @@
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav me-auto mb-2 mb-md-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Formulários I</a>
+            <a class="nav-link active" aria-current="page" href="#">Formulários II</a>
           </li>
 
         </ul>
@@ -52,16 +49,14 @@
     <div class="bg-light p-5 rounded">
 
       <div class="py-5 text-center">
-        <h2>Aula 11 - Formulários e Normalizações</h2>
+        <h2>Aula 13 - Formulários II - Validações </h2>
         <p class="lead">Anim magna aliquip Lorem cupidatat dolore anim non ea aliqua nisi.</p>
       </div>
-
 
       <section>
         <div class="col-md-6 col-lg-12">
 
-          <h4 class="mb-3">Informações capturadas</h4>
-
+          <h4 class="mb-3"> Informações capturadas </h4>
 
           <div class="row g-3">
 
@@ -80,13 +75,10 @@
               <p id="alturaUsuario">1.90</p>
             </div>
 
+            <!-- Novo campo adicionado no formulário-->
             <div class="col-sm-6">
-              <strong class="form-label">Biografia</strong>
-              <p id="biografiaUsuario">nulla laborum ea anim nostrud ex. Ipsum nostrud fugiat magna aliqua ex aliqua
-                elit elit eiusmod.
-                Excepteur sunt sint sint sit excepteur deserunt tempor officia duis. Voluptate exercitation quis fugiat
-                anim. Incididunt ipsum aute labore ut ipsum esse fugiat nulla velit. Ut reprehenderit tempor duis
-                dolore.</p>
+              <strong class="form-label">E-mail</strong>
+              <p id="emailUsuario">aluno@digitalhouse.com.br</p>
             </div>
 
             <div class="col-sm-6">
@@ -128,13 +120,14 @@
                 <input id="altura" type="text" class="form-control" placeholder="1.90">
               </div>
 
-              <!-- BIOGRAFIA -->
-              <div class="col-sm-12">
-                <label for="biografia" class="form-label">Biografia pessoal <span
-                    class="text-muted">(Opcional)</span></label>
-                <textarea id="biografia" class="form-control"
-                  placeholder="Exemplo: Mollit excepteur eu do non. Do laborum do aliquip sit occaecat culpa et officia reprehenderit ex adipisicing."></textarea>
+              <!-- Novo campo adicionado no formulário-->
+              <!-- E-MAIL -->
+              <div class="col-sm-6">
+                <label for="email" class="form-label">E-mail</label>
+                <input id="email" type="email" class="form-control" placeholder="aluno@digitalhouse.com.br">
               </div>
+
+
 
               <!-- LISTA DE ITENS -->
               <div class="col-sm-6">
@@ -187,7 +180,7 @@
       </section>
 
       <footer class="my-5 pt-5 text-muted text-center text-small">
-        <p class="mb-1">&copy; 2022 Digital House</p>
+        <p class="mb-1">&copy; 2023 Digital House Brasil</p>
         <ul class="list-inline">
           <li class="list-inline-item"><a href="#">Privacy</a></li>
           <li class="list-inline-item"><a href="#">Terms</a></li>
@@ -204,10 +197,12 @@
   </div>
 
 
-  <!-- REF - Os Scripts das páginas -->
+  <!-- REF - Os Scripts da página -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
     crossorigin="anonymous"></script>
+
+  <script src="scripts/script_aula13.js"></script>
 
 </body>
 

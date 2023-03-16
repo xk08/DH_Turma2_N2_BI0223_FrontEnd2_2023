@@ -234,14 +234,3 @@ email.addEventListener("keyup", function () {
   }
 
 });
-
-/* Objetivo da aula 14: Conhecer e praticar alguns cocneitos sobre JSON e Storage */
-
-/* Queremos salvar as informações do forms, pra que sejam exibidas automaticamente ao acessar a página
-  -  Colocar essa informação em um objeto JS (Dentro da função de validação)
-  -  Transformar objeto JS para JSON Stringfy
-  -  Salvar no storage -> Criar uma função específica
-  -  Buscar de forma automática do Storage (onload) -> Criar uma função especifica que renderiza os dados
-    -  Desconverter para objeto JS novamente
-    -  Modificar o dom para exibir as informações 
-*/

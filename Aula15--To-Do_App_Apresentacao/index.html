@@ -10,6 +10,10 @@
   <!-- ---------------- estilos compartilhados entre login e signup ---------------- -->
   <link rel="stylesheet" href="styles/acesso.css">
 
+  <!-- Importa o Script para esta página -->
+  <script src="scripts/validacoes/utils.js" defer></script>
+  <script src="scripts/login/index.js" defer></script>
+
 </head>
 
 <body>
@@ -25,14 +29,16 @@
       <h1>Acessar</h1>
       <label>
         E-mail:
-        <input id="inputEmail" type="text">
+        <input id="inputEmail" type="email" required>
+        <small id="emailValidacao"></small>
       </label>
       <label>
         Senha:
-        <input id="inputPassword" type="password">
+        <input id="inputPassword" type="password" required>
+        <small id="passwordValidacao"></small>
       </label>
 
-      <button type="submit">Acessar</button>
+      <button id="botaoAcessarLogin" type="submit" disabled>Acessar</button>
 
     </form>
     <div class="ingressar">

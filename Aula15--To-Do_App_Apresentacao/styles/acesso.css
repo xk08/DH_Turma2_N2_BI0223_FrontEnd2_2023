@@ -33,12 +33,14 @@ form:after {
   background: linear-gradient(var(--primary), var(--secondary));
 }
 
+/* Novo style criado pelo prof Marcos M */
 small {
   display: flex;
   font-size: 12px;
   font-weight: bold;
   color: #E9554EBB;
 }
+
 
 input {
   width: 100%;

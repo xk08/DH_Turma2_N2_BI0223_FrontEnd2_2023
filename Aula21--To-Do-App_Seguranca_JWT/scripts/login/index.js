@@ -87,7 +87,11 @@ function loginAPI(objetoUsuarioJson) {
 }
 
 function loginSucesso(respostaApi) {
-    console.log(respostaApi);
+    /// Salvando o token no cliente (navegador de internet)
+    sessionStorage.setItem("jwt", respostaApi.jwt)
+
+    ///Direcionar o usuário logado, para a tela de tarefas
+    window.location.href = "tarefas.html";
 }
 
 function loginErro(respostaApi) {
@@ -96,7 +100,6 @@ function loginErro(respostaApi) {
         alert("E-mail e/ou senha inválidos");
     }
 }
-
 
 /* Verifica se ambas as informações do formulário de login foram validadas */
 function validaLogin() {

@@ -62,6 +62,9 @@ function loginAPI(objetoUsuarioJson) {
         }
     }
 
+    /// Chamando a animação de loader na tela de login.
+    exibeLoader();
+
     fetch(`${apiBaseURL()}/users/login`, configRequest)
         .then(resultado => {
 
@@ -75,17 +78,27 @@ function loginAPI(objetoUsuarioJson) {
         }
         ).then(
             resultado => {
-                //Chama função ao obter sucesso no login
-                loginSucesso(resultado);
+                setTimeout(() => {
+                    ///Oculta a animação
+                    ocultaLoader();
+                    //Chama função ao obter sucesso no login
+                    loginSucesso(resultado);
+
+                }, 2000);
+
             }
         ).catch(
             erro => {
-                //Chama função ao obter algum erro
-                loginErro(erro);
+                setTimeout(() => {
+                    ///Oculta a animação
+                    ocultaLoader();
+                    //Chama função ao obter algum erro
+                    loginErro(erro);
+                }, 2000);
+
             }
         );
 }
-
 function loginSucesso(respostaApi) {
     /// Salvando o token no cliente (navegador de internet)
     sessionStorage.setItem("jwt", respostaApi.jwt)
@@ -97,7 +110,7 @@ function loginSucesso(respostaApi) {
 function loginErro(respostaApi) {
     if (respostaApi.status == 400 || respostaApi.status == 404) {
         console.log("E-mail e/ou senha inválidos");
-        alert("E-mail e/ou senha inválidos");
+        //alert("E-mail e/ou senha inválidos");
     }
 }
 

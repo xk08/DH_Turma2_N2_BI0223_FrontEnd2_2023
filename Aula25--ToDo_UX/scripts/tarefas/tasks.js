@@ -54,23 +54,42 @@ async function buscaTarefasApi() {
         }
     }
 
+    /// Exibindo a animação de Skeletons na página;
+
+    renderizarSkeletons(3, ".tarefas-pendentes");
+    renderizarSkeletons(2, ".tarefas-terminadas");
+
     try { //Tentar executar uma ação/fluxo
         let respostaApi = await fetch(`${apiBaseURL()}/tasks`, configRequest);
 
 
         if (respostaApi.status == 201 || respostaApi.status == 200) {
             let dados = await respostaApi.json();
-            renderizaTarefasUsuario(dados);
+
+            setTimeout(() => {
+                renderizaTarefasUsuario(dados);
+            }, 1500);
+
         } else {
             throw respostaApi;
         }
     } catch (error) {
         //Exceção
+
+        /// Remover os skeletons da tela
+        removerSkeleton(".tarefas-pendentes");
+        removerSkeleton(".tarefas-terminadas");
         console.log(error);
     }
 }
 
 function renderizaTarefasUsuario(listaTarefas) {
+
+
+    /// Remover os skeletons da tela
+    removerSkeleton(".tarefas-pendentes");
+    removerSkeleton(".tarefas-terminadas");
+
 
     listaTarefasGlobal = listaTarefas;
 
@@ -107,12 +126,12 @@ function renderizaTarefasUsuario(listaTarefas) {
 function editarTarefa(idTarefa) {
 
     /* Sugestão: Buscar as informações da tarefa, com base no ID recebido na função */
-    let tarefa =  listaTarefasGlobal.find(e => e.id == idTarefa);
+    let tarefa = listaTarefasGlobal.find(e => e.id == idTarefa);
     console.log(tarefa.id);
     console.log(tarefa.description);
     console.log(tarefa.completed);
     console.log(tarefa.createdAt);
-   
+
     ///Chamar a API pra fazer a edição.
 }
 

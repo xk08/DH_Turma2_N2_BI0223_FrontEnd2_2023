@@ -195,3 +195,23 @@ let tarefaErro = (erro) => {
     alert("Ocorreu algum erro ao cadastrar a tarefa!");
     console.log(erro);
 }
+
+function finalizaSessao() {
+    console.log("saiu...");
+
+    Swal.fire({
+        title: 'Sair',
+        text: "Realmente deseja sair da página?",
+        icon: 'question',
+        showCancelButton: true,
+        confirmButtonColor: '#5635A1',
+        cancelButtonColor: '#45A861',
+        confirmButtonText: 'Sim',
+        cancelButtonText: 'Não',
+    }).then((result) => {
+        if (result.isConfirmed) {
+            sessionStorage.removeItem("jwt");
+            window.location.href = "index.html";
+        }
+    })
+}
